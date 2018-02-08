@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr_attendance_tree_inherite" model="ir.ui.view">
+            <field name="name">inherite_view_tree_hr_attendance</field>
+            <field name="model">hr.attendance</field>
+            <field name="inherit_id" ref="hr_attendance.view_attendance_tree" />
+            <field name="arch" type="xml">
+                <xpath expr="." position="inside">
+                    <field name="server_id" />
+                    <field name="wrong_entry" />
+                </xpath>
+            </field>
+        </record>
+
+            <!-- <field name="name">inherite_view_from_hr_attendance</field> -->
+            <!-- <field name="model">hr.attendance</field> -->
+            <!-- <field name="inherit_id" ref="hr_attendance.view_attendance_tree" />
+            <field name="arch" type="xml">
+                <field name="inherit_id" ref="hr_attendance.hr_attendance_view_form" />
+                <field name="arch" type="xml">
+                    <group position="inside">
+                        <field name="server_id" />
+                        <field name="wrong_entry" />
+                    </group>
+                </field>
+            </field> -->
+            
+        <!-- </record> -->
+
+        <!-- <record id="client_attendance_form_inherite" model="ir.ui.view">
+            <field name="name">inherite_view_from_hr_attendance</field>
+            <field name="model">hr.attendance</field>
+            <field name="inherit_id" ref="hr_attendance.view_attendance_tree" />
+            <field name="arch" type="xml">
+                <field name="inherit_id" ref="hr_attendance.hr_attendance_view_form" />
+                <field name="arch" type="xml">
+                    <group position="inside">
+                        <field name="server_id" />
+                        <field name="wrong_entry" />
+                    </group>
+                </field>
+            </field>
+        </record> -->
+    </data>
+</odoo>

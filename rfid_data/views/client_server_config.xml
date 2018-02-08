@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="client_attendance_view_config" model="ir.ui.view">
+            <field name="name">base.config.setting.client.form.attendance</field>
+            <field name="model">base.config.settings</field>
+            <field name="inherit_id" ref="hr_attendance.hr_attendance_view_config" />
+            <field name="arch" type="xml">
+                <xpath expr="." position="inside">
+                    <group string="Client Server Configuration">
+                        <field name="client_attendance_server_ip"/>
+                        <field name="client_attendance_database_name" />
+                        <field name="client_attendance_odoo_username" />
+                        <field name="client_attendance_odoo_password" password="True" />
+                    </group>
+                    <group string='Sync Client Server'>
+                        <button string="Sync Emplyoee Data (From Client)" type="object" name="sync_emp_data" class="oe_highlight" />
+                        <button string="Sync Attendance (To Client)" type="object" name="sync_attendance_data" class="oe_highlight" />
+                    </group>
+                    <group string='Break Time Configuration (UTC Time)'>
+                        <field name="break_start_time"/>
+                        <field name="break_finish_time"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
